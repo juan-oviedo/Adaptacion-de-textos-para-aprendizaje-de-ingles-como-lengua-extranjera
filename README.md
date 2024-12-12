@@ -112,9 +112,35 @@ Las métricas sin procesar están disponibles en esta planilla de resultados.
 
 Los hallazgos más relevantes se resumen en las siguientes tablas:
 
-TABLA 1
+| Modelo   | Lecto Comprensión | Corrección       | Few-Shots | Accuracy  | Accuracy Aproximada | Accuracy Pesada | F1 Macro | F1 Micro |
+|----------|--------------------|------------------|-----------|-----------|---------------------|-----------------|----------|----------|
+| llama    | sí                 | sacando B2       | 2         | 41,65%    | 64,17%              | 53,26%          | 40,62%   | 41,65%   |
+| llama    | sí                 | sin              | 2         | 39,54%    | 62,11%              | 50,74%          | 35,52%   | 39,54%   |
+| llama    | sí                 | con              | 2         | 39,36%    | 61,24%              | 50,20%          | 34,70%   | 39,36%   |
+| llama    | no                 | sacando B2       | 2         | 38,26%    | 59,04%              | 47,60%          | 36,32%   | 38,26%   |
+| llama    | sí                 | sin              | 1         | 36,42%    | 58,99%              | 46,68%          | 33,03%   | 36,42%   |
+| llama    | no                 | con              | 2         | 36,42%    | 57,89%              | 45,63%          | 32,89%   | 36,42%   |
+| llama    | sí                 | sacando B2       | 1         | 36,24%    | 59,63%              | 47,11%          | 36,02%   | 36,24%   |
+| llama    | no                 | sin              | 2         | 35,50%    | 57,57%              | 44,61%          | 31,19%   | 35,50%   |
+| bert TA  |                    |                  |           | 34,95%    | 62,11%              | 47,83%          | 27,48%   | 34,95%   |
+| llama    | no                 | sacando B2       | 1         | 32,39%    | 53,17%              | 39,95%          | 31,18%   | 32,39%   |
 
-TABLA 2
+Tabla 1: Los 10 mejores experimentos ordenados segun su accuracy.
+
+| Modelo   | Lecto Comprensión | Corrección       | Few-Shots | Accuracy  | Accuracy Aproximada | Accuracy Pesada | F1 Macro | F1 Micro |
+|----------|--------------------|------------------|-----------|-----------|---------------------|-----------------|----------|----------|
+| llama    | sí                 | sacando B2       | 2         | 41,65%    | 64,17%              | 53,26%          | 40,62%   | 41,65%   |
+| llama    | sí                 | sin              | 2         | 39,54%    | 62,11%              | 50,74%          | 35,52%   | 39,54%   |
+| bert TA  |                    |                  |           | 34,95%    | 62,11%              | 47,83%          | 27,48%   | 34,95%   |
+| llama    | sí                 | con              | 2         | 39,36%    | 61,24%              | 50,20%          | 34,70%   | 39,36%   |
+| llama    | sí                 | sacando B2       | 1         | 36,24%    | 59,63%              | 47,11%          | 36,02%   | 36,24%   |
+| llama    | no                 | sacando B2       | 2         | 38,26%    | 59,04%              | 47,60%          | 36,32%   | 38,26%   |
+| llama    | sí                 | sin              | 1         | 36,42%    | 58,99%              | 46,68%          | 33,03%   | 36,42%   |
+| llama    | no                 | con              | 2         | 36,42%    | 57,89%              | 45,63%          | 32,89%   | 36,42%   |
+| llama    | no                 | sin              | 2         | 35,50%    | 57,57%              | 44,61%          | 31,19%   | 35,50%   |
+| llama    | no                 | sacando B2       | 1         | 32,39%    | 53,17%              | 39,95%          | 31,18%   | 32,39%   |
+
+Tabla 2: Los 10 mejores experimentos ordenados segun su accuracy aproximada.
 
 ### Discusión de los Resultados de Clasificación
 
@@ -246,21 +272,61 @@ A continuación, se presentan los resultados de los experimentos de adaptación,
 
 **Resultados de FKGL**
 
-TABLA 3
+| Clase | Original | Sin LectoComprensión | Con LectoComprensión |
+|-------|----------|-----------------------|-----------------------|
+| A1    | 1.276    | 1.367                | 1.508                |
+| A2    | 3.807    | 2.247                | 2.546                |
+| B1    | 7.613    | 5.872                | 5.634                |
+| B2    | 9.793    | 11.437               | 10.669               |
+| C1    | 12.103   | 14.740               | 14.167               |
+| C2    | 14.876   | 16.165               | 15.362               |
+| **Error Cuadrático** |          | 16.788                | 10.823               |
+
+Tabla 3: resultados FKGL
 
 **Resultados de BERTScore**
 
 Precisión Promedio:
 
-TABLA 4
+| Clase                     | Sin LectoComprensión | Con LectoComprensión |
+|---------------------------|-----------------------|-----------------------|
+| A1                        | 91.96%               | 91.51%               |
+| A2                        | 92.11%               | 91.67%               |
+| B1                        | 93.19%               | 92.10%               |
+| B2                        | 91.82%               | 91.21%               |
+| C1                        | 91.19%               | 90.75%               |
+| C2                        | 90.76%               | 90.85%               |
+| **Promedio por Aproximación** | 91.84%               | 91.35%               |
+
+Tabla 4: BERTScore precisión promedio 
 
 Recall Promedio:
 
-TABLA 5
+| Clase                     | Sin LectoComprensión | Con LectoComprensión |
+|---------------------------|-----------------------|-----------------------|
+| A1                        | 89.25%               | 89.35%               |
+| A2                        | 89.42%               | 89.53%               |
+| B1                        | 92.10%               | 90.85%               |
+| B2                        | 91.26%               | 90.23%               |
+| C1                        | 91.13%               | 90.37%               |
+| C2                        | 90.69%               | 90.43%               |
+| **Promedio por Aproximación** | 90.64%               | 90.13%               |
+
+Tabla 5: BERTScore recall promedio 
 
 F1 Promedio:
 
-TABLA 6
+| Clase                     | Sin LectoComprensión | Con LectoComprensión |
+|---------------------------|-----------------------|-----------------------|
+| A1                        | 90.58%               | 90.40%               |
+| A2                        | 90.74%               | 90.58%               |
+| B1                        | 92.63%               | 91.46%               |
+| B2                        | 91.53%               | 90.71%               |
+| C1                        | 91.15%               | 90.55%               |
+| C2                        | 90.72%               | 90.64%               |
+| **Promedio por Aproximación** | 91.23%               | 90.72%               |
+
+Tabla 6: BERTScore F1 promedio 
 
 ### Discusión de los Resultados
 
