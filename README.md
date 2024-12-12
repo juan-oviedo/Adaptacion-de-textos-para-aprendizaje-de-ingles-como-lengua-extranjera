@@ -1,5 +1,39 @@
 # Adaptación de textos para aprendizaje de inglés como lengua extranjera
 
+## Indice
+
+<!-- toc -->
+
+- [Introducción](#introduccion)
+  * [Problemática](#problematica)
+  * [Datos utilizados](#datos-utilizados)
+  * [División del trabajo](#division-del-trabajo)
+- [Fase 1: Clasificación de textos en niveles CEFR](#fase-1-clasificacion-de-textos-en-niveles-cefr)
+  * [Introducción](#introduccion-1)
+  * [Variables experimentales y métricas utilizadas](#variables-experimentales-y-metricas-utilizadas)
+  * [Métricas de evaluación](#metricas-de-evaluacion)
+  * [Experimentos](#experimentos)
+    + [Preparación de los datos](#preparacion-de-los-datos)
+    + [Exploración inicial y entorno de experimentación](#exploracion-inicial-y-entorno-de-experimentacion)
+    + [Diseño de experimentos de clasificación](#diseno-de-experimentos-de-clasificacion)
+    + [Evaluación y uso del dataset](#evaluacion-y-uso-del-dataset)
+  * [Resultados](#resultados)
+  * [Discusión de los Resultados de Clasificación](#discusion-de-los-resultados-de-clasificacion)
+  * [Conclusiones de los Experimentos de Clasificación](#conclusiones-de-los-experimentos-de-clasificacion)
+- [Fase 2: Adaptación de Textos en nivel especifico de CEFR](#fase-2-adaptacion-de-textos-en-nivel-especifico-de-cefr)
+  * [Introduccion](#introduccion)
+  * [Diseño de las Aproximaciones](#diseno-de-las-aproximaciones)
+  * [Métricas de Evaluación en Adaptación de Textos](#metricas-de-evaluacion-en-adaptacion-de-textos)
+    + [Métricas Utilizadas](#metricas-utilizadas)
+  * [Resultados de Adaptación](#resultados-de-adaptacion)
+  * [Discusión de los Resultados](#discusion-de-los-resultados)
+  * [Conclusión](#conclusion)
+- [Conclusión General del Informe](#conclusion-general-del-informe)
+- [Plan Futuro con Recursos](#plan-futuro-con-recursos)
+- [Agradecimientos](#agradecimientos)
+
+<!-- tocstop -->
+
 ## Introducción
 
 En el marco de la materia optativa Text Mining, se nos asignó la tarea de desarrollar un proyecto aplicando Inteligencia Artificial con un enfoque en Aprendizaje No Supervisado. El proyecto que elegí aborda el desafío de adaptar textos a un nivel CEFR (Common European Framework of Reference for Languages) dado, con el objetivo principal de identificar configuraciones (modelos, prompts, etc.) que permitan generar adaptaciones satisfactorias a un nivel específico.
