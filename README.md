@@ -86,7 +86,7 @@ Antes de utilizar la mayor parte del dataset (90%), se realizó una exploración
 Este problema llevó a Ajustar los prompts para mejorar la salida del modelo. Introducir una nueva clase "unknown", que incluye muestras donde no se identificó una clasificación válida.
 
 #### Diseño de experimentos de clasificación
-Se llevaron a cabo un total de 23 experimentos por modelo (Orca y Llama), además de 2 experimentos con modelos BERT preentrenados: tareknaous/readabert-en (BERT-Ta) y AbdulSami/bert-base-cased-cefr (BERT-Ab).
+Se llevaron a cabo un total de 23 experimentos por modelo (Orca y Llama), además de 2 experimentos con modelos BERT preentrenados: tareknaous/readabert-en (BERT-Ta) y AbdulSami/bert-base-cased-cefr (BERT-Ab). Todos los propmts utilizados se encuentran en esta [planilla](https://github.com/juan-oviedo/Adaptacion-de-textos-para-aprendizaje-de-ingles-como-lengua-extranjera/blob/main/Experimentos/Experimentos%20Clasificacion.xlsx)
 
 **Desglose de experimentos**  
 - 0-shot:  
@@ -108,7 +108,7 @@ Se realizaron experimentos con modelos preentrenados: BERT-Ta y BERT-Ab, conocid
 Todos los experimentos se realizaron utilizando el 90% del dataset (entrenamiento + evaluación), con el propósito de evaluar los resultados de forma integral.
 
 ### Resultados
-Las métricas sin procesar están disponibles en esta planilla de resultados.
+Las métricas sin procesar están disponibles en esta [planilla](https://github.com/juan-oviedo/Adaptacion-de-textos-para-aprendizaje-de-ingles-como-lengua-extranjera/blob/main/Resultados/Resultados%20Clasificacion.xlsx) de resultados.
 
 Los hallazgos más relevantes se resumen en las siguientes tablas:
 
@@ -230,7 +230,8 @@ Cada uno de las aproximaciones se dividió en seis experimentos según el nivel 
 - Textos adaptables a C1.
 - Textos adaptables a C2.
   
-Esta clasificación permite analizar de manera específica el rendimiento del modelo para cada nivel CEFR, considerando tanto la complejidad de los textos originales como los desafíos inherentes a cada nivel objetivo de adaptación.
+Esta clasificación permite analizar de manera específica el rendimiento del modelo para cada nivel CEFR, considerando tanto la complejidad de los textos originales como los desafíos inherentes a cada nivel objetivo de adaptación.  
+Todos los prompts utilizados se encuentran en esta [planilla](https://github.com/juan-oviedo/Adaptacion-de-textos-para-aprendizaje-de-ingles-como-lengua-extranjera/blob/main/Experimentos/Experimentos%20Adaptacion.xlsx)
 
 ### Métricas de Evaluación en Adaptación de Textos
 
